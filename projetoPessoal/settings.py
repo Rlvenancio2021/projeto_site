@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'sitePessoal',
     'carreira',
     'graduacao',
+    'cursos',
 ]
 
 MIDDLEWARE = [
