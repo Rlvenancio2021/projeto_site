@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carreira
+from .models import Carreira, Resumo_Carreira
 
 # Register your models here.
 class ListandoCarreira(admin.ModelAdmin):
@@ -11,3 +11,10 @@ class ListandoCarreira(admin.ModelAdmin):
     
     
 admin.site.register(Carreira, ListandoCarreira)
+
+class ListandoResumoCarreira(admin.ModelAdmin):
+    list_display = ('id','titulo','resumo','data_inclusao','data_modificacao')
+    list_display_links = ('id','titulo',)
+    list_filter = ('titulo',)
+    
+admin.site.register(Resumo_Carreira, ListandoResumoCarreira)

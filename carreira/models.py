@@ -12,3 +12,12 @@ class Carreira(models.Model):
     
     def __str__(self):
         return self.nome_empresa_fonetico
+    
+class Resumo_Carreira(models.Model):
+    titulo = models.CharField(max_length=100)
+    resumo = models.TextField()
+    data_inclusao = models.DateField()
+    data_modificacao = models.DateField(blank=True, null=True)
+    
+    def __str__(self):
+        return self.titulo
